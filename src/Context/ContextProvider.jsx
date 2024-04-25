@@ -5,7 +5,7 @@ const UserContext= React.createContext();
 
 
 export default function ContextProvider({children}) {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState(null)
   
 
   return (
