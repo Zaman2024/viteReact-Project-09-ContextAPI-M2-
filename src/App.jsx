@@ -4,20 +4,16 @@ import './App.css'
 import Login from './Component/Login'
 import Profile from './Component/Profile'
 import ContextProvider from './Context/ContextProvider'
-import UserContext from './Context/ContextProvider'
+// import UserContext from './Context/ContextProvider'
 
 function App() {
-  const [user, setUser] = useState('')
+  const [counter, setCounter] = useState(0)
    
-  useEffect(()=>{
-    setUser = useContext(ContextProvider)
-  })
-
   return (
-    <UserContext.Provider value={{user, setUser}}>
+    <ContextProvider>
       <Login />
       <Profile />
-  </UserContext.Provider>
+  </ContextProvider>
   )
 }
 

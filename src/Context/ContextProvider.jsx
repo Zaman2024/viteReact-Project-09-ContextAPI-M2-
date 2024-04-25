@@ -3,16 +3,16 @@ import React, { useState } from 'react'
 
 const UserContext= React.createContext();
 
-// export default function ContextProvider({children}) {
-//   const [user, setUser] = useState('')
+
+export default function ContextProvider({children}) {
+  const [user, setUser] = useState('')
   
 
-//   return (
+  return (
 
-//     <UserContext.Provider value={{user, setUser}}>
-//       {children}
-//     </UserContext.Provider>
+    <UserContext.Provider value={{user, setUser}}>
+      {children}
+    </UserContext.Provider>
 
-//   )
-// }
-export default UserContext
+  )
+}

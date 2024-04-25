@@ -3,9 +3,10 @@ import React, { useContext } from 'react'
 import ContextProvider from '../Context/ContextProvider'
 
 function Profile() {
-  const {User} =useContext(ContextProvider)
-  if(!User) return <div>Please Login</div>
-  return <div>Welcome {User.username}</div>
+  const {user} = useContext(ContextProvider)
+
+  if(!user) return <div>Please Login</div>
+  return <div>Welcome {user.username}</div>
 }
 
 export default Profile
